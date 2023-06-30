@@ -1,0 +1,53 @@
+INFORMACIÓN SOBRE EL CONSUMO DEL BACKEND
+
+---------------------------------------------------------------------
+
+/getAllEvents => 
+    NO recibe parametros 
+    devuelve todos los eventos que existen en la BDD
+
+/getAllUsers =>
+    NO recibe parametros 
+    devuelve todos los eventos que existen en la BDD
+    de momento no tiene una funcionalidad logica en el proyecto
+
+/getUser =>
+    Recibe un parametro id encriptado ( Para encriptar el id usar libreria CryptoJS => CryptoJS.AES.encrypt("id", "clave_secreta").toString();)
+    devuelve el usuario que se encontro
+
+/getUserByMail =>
+    Recibe un parametro mail
+    devuelve el usuario que encontro
+
+/login =>
+    Recibe dos parametros, mail y password
+    devuelve el usuario que se esta logueando
+
+/register => 
+    Recibe tres parametros, mail, password y username
+    SI el mail ya existe, devuelve mail ya utilizado
+    Si el mail no existe, devuelve los datos del nuevo usuario registrado
+    NO es necesario pasar el parametro favs : [] ya que se agrega automaticamente
+
+/favs => 
+    Recibe dos parametros, el id encriptado y el nuevo array de favoritos.
+    devuelve el usuario actualizado
+
+---------------------------------------------------------------------
+
+PARA ENVIAR BODY => USAR JSON.stringify()
+
+    JSON.stringify({
+        id:"12312312jhbdf198273sdsd",
+        favs:["HOLA","CHUA"],
+        username:"SAHDAS",
+        mail:"nisa@gmad.com"
+        password:"iashdipoasdsa"
+    })
+
+---------------------------------------------------------------------
+
+TODAS las respuestas tienen =>
+    response= "success" o "failed"
+    message=detalla el mensaje de success o failed
+    data=informacion retornada

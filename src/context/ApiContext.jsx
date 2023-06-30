@@ -17,7 +17,7 @@ export const ApiContext = ({ children }) => {
         //      password:"iashdipoasdsa"
         // })
 
-        await fetch(`http://localhost:3000/api/${param}`,{
+        await fetch(`https://backend-vi-b-amos-vercel.vercel.app/api/${param}`,{
             method:"POST",
             body: data,
             headers: {
@@ -35,6 +35,7 @@ export const ApiContext = ({ children }) => {
     }
 
     const emailJS = async (data) => {
+        // VALIDAR PREVIAMENTE QUE EXISTE EL MAIL EN LA BASE DE DATOS
         // API NECESARIA PARA ENVIAR UN CORREO ELECTRONICO A CIERTO MAIL.
 
         // ARRAY NECESARIO DE "data"
