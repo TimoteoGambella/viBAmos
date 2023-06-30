@@ -1,10 +1,22 @@
 import { createContext } from 'react';
+import emailjs from '@emailjs/browser';
 
 export const UseApiContext = createContext();
 
 export const ApiContext = ({ children }) => {
 
     const apiFetch= async(param,data)=>{
+
+        // FORMATO DATA REQUERIDO 
+
+        // JSON.stringify({
+        //      id:"12312312jhbdf198273sdsd",
+        //      favs:["HOLA","CHUA"],
+        //      username:"SAHDAS",
+        //      mail:"nisa@gmad.com"
+        //      password:"iashdipoasdsa"
+        // })
+
         await fetch(`http://localhost:3000/api/${param}`,{
             method:"POST",
             body: data,
@@ -21,6 +33,26 @@ export const ApiContext = ({ children }) => {
             return error
         })
     }
+
+    const emailJS = async (data) => {
+        // API NECESARIA PARA ENVIAR UN CORREO ELECTRONICO A CIERTO MAIL.
+
+        // ARRAY NECESARIO DE "data"
+        // const array= {
+        //     nombre:"",
+        //     contrasena:"",
+        //     toMail:""
+        // }
+
+        emailjs.send('service_rkbguuj', 'template_7y8c547', data, process.env.EMAILJSKEY).then(
+            function (response) {
+                return true;
+            },
+            function (error) {
+                return false;
+            }
+        );
+    };
 
     return (
         <UseApiContext.Provider
