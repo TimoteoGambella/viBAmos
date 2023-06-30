@@ -57,7 +57,8 @@ export const ApiContext = ({ children }) => {
     return (
         <UseApiContext.Provider
             value={{
-                apiFetch
+                apiFetch,
+                emailJS
             }}
         >
             {children}
