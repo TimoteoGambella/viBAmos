@@ -1,0 +1,50 @@
+.button{
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 16px;
+    border-radius: 2px;
+    &.button1{
+        background-color: #002F6C;
+        svg, p{
+            color: #FBFBFB;
+        }
+    }
+    &.button2{
+        border:1px solid #002F6C;
+        svg, p{
+            color: #002F6C;
+        }
+    }
+    &.button3{
+        svg, p{
+            color: #002F6C;
+        }
+    }
+    &.button4{
+        background-color: #FBFBFB;
+        svg, p{
+            color: #002F6C;
+        }
+    }
+    &.button5{
+        border: 1px solid #FBFBFB;
+        svg, p{
+            color: #FBFBFB;
+        }
+    }
+    &.disabled{
+        background-color: #AEC1CC;
+        border: none;
+        svg,p{
+            color: #67728A;
+        }
+    }
+    &.specialDisabled{
+        svg,p{
+            color: #67728A;
+        }
+    }
+}
