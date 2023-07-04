@@ -1,14 +1,17 @@
 import { faArrowRight, faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default function Button({number,text,status,screen,child1,child2,child3}){
+export default function Button({number,text,status,screen,child1,child2,child3,classes,handleClick}){
     return(
         <div className={
-                `button
+                `button ${classes}
                 ${number===1?"button1":number===2?"button2":number===3?"button3":number===4?"button4":"button5"}
                 ${!status&&number!==3?"disabled":!status&&number===3?"specialDisabled":""}`
             }
             style={{cursor:screen==="desktop"?"pointer":"default"}}
+            onClick={()=>{
+                if(status){handleClick()}
+            }}
         >
             {child1 && 
                 <FontAwesomeIcon icon={faBars} size="xl"/>
