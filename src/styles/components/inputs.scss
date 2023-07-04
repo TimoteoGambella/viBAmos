@@ -1,0 +1,41 @@
+.specialInput{
+    &.active{
+        label{
+            color: #002F6C;
+        }
+        div{
+            fieldset{
+                border-color: #002F6C !important;
+            }
+        }
+        p{
+            color: #343434;
+        }
+    }
+    &.error{
+        label{
+            color: #F73939;
+        }
+        div{
+            fieldset{
+                border-color: #F73939 !important;
+            }
+        }
+        p{
+            color: #F73939;
+        }
+    }
+    &.disabled{
+        label{
+            color: #67728A;
+        }
+        div{
+            fieldset{
+                border-color: #67728A !important;
+            }
+        }
+        p{
+            color: #67728A;
+        }
+    }
+}
