@@ -28,10 +28,10 @@ export default function Home(){
             <Button number={4} text={"Button"} status={false} screen={"desktop"} child1={true} classes={"claseExtra"} handleClick={handleClick} />
             <Button number={5} text={"Button"} status={true} screen={"desktop"} child1={true} child2={true} child3={true} classes={"claseExtra"} handleClick={handleClick}/>
 
-            <Input label={"Label"} error={false} helper={"HOLA que tal"} disabled={false} classes={"claseExtra"} handleChange={setData}/>
-            <Input label={"Error"} error={true} helper={"HOLA que tal"} disabled={false} classes={"claseExtra"} handleChange={setData}/>
-            <Input label={"Error"} error={false} helper={"HOLA que tal"} disabled={true} classes={"claseExtra"} handleChange={setData}/>
-            <Input label={"Error"} error={true} helper={"HOLA que tal"} disabled={true} classes={"claseExtra"} handleChange={setData}/>
+            <Input label={"Label"} typeOfInput={"text"} error={false} helper={"HOLA que tal"} disabled={false} classes={"claseExtra"} handleChange={setData}/>
+            <Input label={"Error"} typeOfInput={"text"} error={true} helper={"HOLA que tal"} disabled={false} classes={"claseExtra"} handleChange={setData}/>
+            <Input label={"Error"} typeOfInput={"text"} error={false} helper={"HOLA que tal"} disabled={true} classes={"claseExtra"} handleChange={setData}/>
+            <Input label={"Error"} typeOfInput={"text"} error={true} helper={"HOLA que tal"} disabled={true} classes={"claseExtra"} handleChange={setData}/>
         </div>
     )
 }

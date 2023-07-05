@@ -1,6 +1,6 @@
 import { TextField } from "@mui/material";
 
-export default function Input({label,error,helper,disabled,classes,handleChange}){
+export default function Input({label,error,helper,disabled,classes,handleChange,typeOfInput}){
     return(
         <TextField
             variant="outlined"
@@ -9,6 +9,7 @@ export default function Input({label,error,helper,disabled,classes,handleChange}
             disabled={disabled}
             label={label}
             helperText={helper}
+            type={typeOfInput}
             className={
                 `specialInput ${classes}
                 ${!error&&!disabled&&"active"}
