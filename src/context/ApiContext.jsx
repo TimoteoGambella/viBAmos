@@ -5,7 +5,7 @@ export const UseApiContext = createContext();
 
 export const ApiContext = ({ children }) => {
 
-    const apiFetch= async(param,data)=>{
+    const apiFetch = async (param,data) => {
 
         // FORMATO DATA REQUERIDO 
 
@@ -17,21 +17,20 @@ export const ApiContext = ({ children }) => {
         //      password:"iashdipoasdsa"
         // })
 
-        await fetch(`https://backend-vi-b-amos-vercel.vercel.app/api/${param}`,{
-            method:"POST",
-            body: data,
-            headers: {
-            "Content-Type":"application/json"
-            }
-        }).then(res=>{
-            res.json().then(res=>{
-                return res
-            }).catch((error)=>{
-                return error
-            })
-        }).catch((error)=>{
-            return error
-        })
+        try {
+            const response = await fetch(`https://backend-vi-b-amos-vercel.vercel.app/api/${param}`,{
+                method: "POST",
+                body: data,
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            });
+
+            const res = await response.json();
+            return res;
+        } catch (error) {
+            return error;
+        }
     }
 
     const emailJS = async (data) => {
@@ -45,7 +44,7 @@ export const ApiContext = ({ children }) => {
         //     toMail:""
         // }
 
-        emailjs.send('service_rkbguuj', 'template_7y8c547', data, process.env.EMAILJSKEY).then(
+        emailjs.send('service_rkbguuj','template_7y8c547',data,process.env.EMAILJSKEY).then(
             function (response) {
                 return true;
             },

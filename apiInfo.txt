@@ -41,7 +41,7 @@ PARA ENVIAR BODY => USAR JSON.stringify()
         id:"12312312jhbdf198273sdsd",
         favs:["HOLA","CHUA"],
         username:"SAHDAS",
-        mail:"nisa@gmad.com"
+        mail:"nisa@gmad.com",
         password:"iashdipoasdsa"
     })
 

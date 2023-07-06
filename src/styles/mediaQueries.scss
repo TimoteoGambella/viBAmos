@@ -1,10 +1,11 @@
-@mixin max_screen($size) {
-  @media (max-width: ($size + "px")) {
+@mixin tablet() {
+  @media (max-width: (960 + "px")) {
     @content;
   }
 }
-@mixin min_screen($size) {
-  @media (min-width: ($size + "px")) {
+
+@mixin tablet() {
+  @media (max-width: (1440 + "px")) {
     @content;
   }
 }
