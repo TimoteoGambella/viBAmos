@@ -1,18 +1,12 @@
 .specialInput {
-    &.active {
-        label {
-            color: #002F6C;
+    div {
+        fieldset {
+            border-color: #002F6C !important;
         }
+    }
 
-        div {
-            fieldset {
-                border-color: #002F6C !important;
-            }
-        }
-
-        p {
-            color: #343434;
-        }
+    p {
+        color: #343434;
     }
 
     &.error {
@@ -46,4 +40,5 @@
             color: #67728A;
         }
     }
+
 }
