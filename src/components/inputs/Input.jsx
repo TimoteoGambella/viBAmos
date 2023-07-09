@@ -14,7 +14,7 @@ export default function Input({ label,error,helper,disabled,classes,handleChange
         <ThemeProvider theme={theme}>
             <TextField
                 variant="outlined"
-                id={`outlined-basic`}
+                id={`outlined-basic email`}
                 error={error && !disabled}
                 disabled={disabled}
                 label={label}
@@ -28,7 +28,7 @@ export default function Input({ label,error,helper,disabled,classes,handleChange
                     ${!error && disabled && "disabled"}
                     ${error && disabled && "disabled"}`
                 }
-                onChangeCapture={(e) => handleChange(e.target.value)}
+                onChangeCapture={(e) => handleChange(e.target.value,e.target.type)}
             />
         </ThemeProvider>
     )
