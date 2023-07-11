@@ -7,89 +7,25 @@ import logo from '../assets/viBAmos.png';
 import loadingLogo from '../assets/Loading_icon.gif';
 import starImg from '../assets/greenStar.png';
 import ellipse from '../assets/Ellipse.png';
+import { UseUserContext } from '../context/UserContext';
 
 const LogIn = () => {
-  const [apiData,setApiData] = useState({ mail: '',password: '' });
-  const [emailErrror,setEmailError] = useState(false);
-  const [pswError,setPswError] = useState(false);
-  const [emailHelp,setEmailHelp] = useState('');
-  const [pswHelp,setPswHelp] = useState('');
-  const [canLogin,setCanLogin] = useState(false);
 
 
   const { apiFetch } = useContext(UseApiContext);
+  const { logIn,resetEmailHelper,resetPwdHelper,apiData,emailErrror,pswError,emailHelp,pswHelp } = useContext(UseUserContext);
 
-
-  const settingUserInfo = (email,password) => {
-
-    let userInfo = { mail: '',password: '' }
-
-    //Email validation
-    const validRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-
-    //Password validation
-    const passw = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
-
-    if (email.match(validRegex) !== null && password.match(passw) !== null) {
-      userInfo = { mail: email,password: password }
-      setEmailError(false)
-      setEmailHelp('')
-      setPswError(false)
-      setPswHelp('')
-    } else if (email.match(validRegex) === null && password.match(passw) === null) {
-      setEmailError(true)
-      setEmailHelp('Ingresa un email correcto')
-      setPswError(true)
-      setPswHelp('La contraseña debe incluir una Mayúscula, una minúscula, números y entre 6 a 20 dígitos.')
-    }
-
-    if (email.match(validRegex) === null) {
-      userInfo = { mail: '',password: userInfo.password }
-      setEmailError(true)
-      setEmailHelp('Ingresa un email correcto')
-    }
-
-    if (password.match(passw) === null) {
-      userInfo = { mail: userInfo.mail,password: '' }
-      setPswError(true)
-      setPswHelp('La contraseña debe incluir una Mayúscula, una minúscula, números y entre 6 a 20 dígitos.')
-    }
-    return userInfo;
-  }
-
-
-  const logIn = () => {
-    let inputEmail = document.querySelector('.inputEmail').children[1].children[0].value;
-    let inputPassword = document.querySelector('.inputPassword').children[1].children[0].value;
-
-    let userInfo = settingUserInfo(inputEmail,inputPassword);
-
-    if (userInfo.mail !== '' && userInfo.password !== '') {
-      setApiData(userInfo);
-    }
-
-  }
-
-  const resetEmailHelper = () => {
-    setEmailError(false)
-    setEmailHelp('')
-  }
-
-  const resetPwdHelper = () => {
-    setPswError(false)
-    setPswHelp('')
-  }
 
   useEffect(() => {
-    let storageUser = localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : { mail: '',password: '' };
-    if (storageUser.mail !== '' && storageUser.password !== '') {
-      apiFetch('login',JSON.stringify(storageUser)).then(data => console.log(data))
-    } else if (apiData.mail === '' || apiData.password === '' || apiData.mail === undefined || apiData.password === undefined) {
+    if (apiData.mail === '' || apiData.password === '' || apiData.mail === undefined || apiData.password === undefined) {
       console.log('No hay datos ingresados');
     } else {
-      console.log(apiData);
-      apiFetch('login',JSON.stringify(apiData)).then(data => console.log(data))
-      localStorage.setItem('user',JSON.stringify(apiData))
+      apiFetch('login',JSON.stringify(apiData))
+        .then(data => {
+          localStorage.setItem('user',JSON.stringify(apiData))
+          console.log(data)
+        }
+        )
     }
   },[apiData]);
 
