@@ -87,6 +87,7 @@ const LogIn = () => {
     } else if (apiData.mail === '' || apiData.password === '' || apiData.mail === undefined || apiData.password === undefined) {
       console.log('No hay datos ingresados');
     } else {
+      console.log(apiData);
       apiFetch('login',JSON.stringify(apiData)).then(data => console.log(data))
       localStorage.setItem('user',JSON.stringify(apiData))
     }
