@@ -119,6 +119,10 @@ export const UserContext = ({ children }) => {
     return userInfo;
   }
 
+  const prueba = ()=>{
+    
+  }
+
   return (
     <UseUserContext.Provider
       value={{
