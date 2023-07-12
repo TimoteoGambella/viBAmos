@@ -19,17 +19,21 @@ const SignUp = () => {
 
 
   useEffect(() => {
-    if (apiData.mail !== '' || apiData.password !== '') {
+    if (apiData.username !== '' || apiData.mail !== '' || apiData.password !== '') {
       console.log(apiData);
-      // let encriptedId;
       apiFetch('register',JSON.stringify(apiData))
         .then(data => {
-          // encriptedId = CryptoJS.AES.encrypt(data.data[0]._id,'clave_secreta').toString();
-          // localStorage.setItem('user',JSON.stringify(apiData))
-          console.log(data)
+          if (data.response !== 'failed') {
+            let encriptedId = {
+              id: CryptoJS.AES.encrypt(data.data._id,'clave_secreta').toString()
+            }
+            localStorage.setItem('user',JSON.stringify(encriptedId))
+            console.log(data);
+          } else {
+            console.log(data);
+          }
         }
         )
-      // apiFetch('getUser',JSON.stringify(encriptedId)).then(data => console.log(data))
     }
   },[apiData]);
 

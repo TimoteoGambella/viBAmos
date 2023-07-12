@@ -37,6 +37,7 @@ export const UserContext = ({ children }) => {
       setConfPswError(false)
       setConfPswHelp('')
     } else if (email.match(validRegex) === null && (logOrSign === 'logIn' ? password.match(passw) === null : (password.match(passw) !== null && password !== ConfirmPassword)) && (logOrSign === 'logIn' ? true : username === '')) {
+      logOrSign === 'logIn' ? userInfo = { mail: '',password: '' } : userInfo = { username: '',mail: '',password: '' }
       setEmailError(true)
       setEmailHelp('Ingresa un email correcto.')
       setPswError(true)
@@ -49,6 +50,7 @@ export const UserContext = ({ children }) => {
 
     if (email.match(validRegex) === null) {
       logOrSign === 'logIn' ? userInfo = { mail: '',password: password } : userInfo = { username: username,mail: '',password: password }
+
       setEmailError(true)
       setEmailHelp('Ingresa un email correcto.')
     }
@@ -64,12 +66,15 @@ export const UserContext = ({ children }) => {
         setUserError(true)
         setUserHelp('Ingrese un usuario.')
       }
-
       if (ConfirmPassword !== password || ConfirmPassword === '') {
         userInfo = { username: username,mail: email,password: '' }
         setConfPswError(true)
         setConfPswHelp('Las contraseñas no coinciden.')
+      } else {
+        setConfPswError(false)
+        setConfPswHelp('')
       }
+
     }
     return userInfo;
   }
@@ -81,7 +86,6 @@ export const UserContext = ({ children }) => {
     let inputConfirmPassword = document.querySelector('.inputConfirmPassword') === null ? '' : document.querySelector('.inputConfirmPassword').children[1].children[0].value;
 
     let userInfo = settingUserInfo(inputUser,inputEmail,inputPassword,inputConfirmPassword,logOrSign);
-
     if (logOrSign === 'logIn') {
       if (userInfo.mail !== '' && userInfo.password !== '') {
         setApiData(userInfo);
