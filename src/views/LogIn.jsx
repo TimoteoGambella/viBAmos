@@ -8,18 +8,18 @@ import loadingLogo from '../assets/Loading_icon.gif';
 import starImg from '../assets/greenStar.png';
 import ellipse from '../assets/Ellipse.png';
 import { UseUserContext } from '../context/UserContext';
+import { useNavigate } from 'react-router-dom';
 const CryptoJS = require("crypto-js");
 
 const LogIn = () => {
 
+  const navigate = useNavigate();
   const { apiFetch } = useContext(UseApiContext);
-  const { logIn2,logIn,resetEmailHelper,resetPwdHelper,apiData,emailErrror,pswError,emailHelp,pswHelp } = useContext(UseUserContext);
+  const { logIn,resetEmailHelper,resetPwdHelper,apiData,emailErrror,pswError,emailHelp,pswHelp } = useContext(UseUserContext);
 
 
   useEffect(() => {
-    if (apiData.mail === '' || apiData.password === '' || apiData.mail === undefined || apiData.password === undefined) {
-      console.log('No hay datos ingresados');
-    } else {
+    if (apiData.mail !== '' || apiData.password !== '') {
       let encriptedId;
       apiFetch('login',JSON.stringify(apiData))
         .then(data => {
@@ -49,8 +49,8 @@ const LogIn = () => {
         <span><a href="" className='font-mobile-14'>¿Olvidaste tu contraseña?</a></span>
       </div>
       <div className='logIn_buttonsContainer'>
-        <Button number={1} text={"Iniciar sesión"} status={true} screen={"mobile"} child1={false} child2={true} child3={false} classes={"logInButtons"} handleClick={logIn} />
-        <Button number={2} text={"Registrarse"} status={true} screen={"mobile"} child1={false} child2={true} child3={false} classes={"logInButtons"} />
+        <Button number={1} text={"Iniciar sesión"} status={true} screen={"mobile"} child1={false} child2={true} child3={false} classes={"logInButtons"} handleClick={() => logIn('logIn')} />
+        <Button number={2} text={"Registrarse"} status={true} screen={"mobile"} child1={false} child2={true} child3={false} classes={"logInButtons"} handleClick={() => navigate("/signUp")} />
       </div>
     </div>
   )
