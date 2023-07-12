@@ -8,11 +8,13 @@ export const UserContext = ({ children }) => {
   const [apiData,setApiData] = useState({ mail: '',password: '' });
   const [emailErrror,setEmailError] = useState(false);
   const [pswError,setPswError] = useState(false);
+  const [userError,setUserError] = useState(false);
   const [emailHelp,setEmailHelp] = useState('');
   const [pswHelp,setPswHelp] = useState('');
-  const [canLogin,setCanLogin] = useState(false);
+  const [userHelp,setUserHelp] = useState('');
 
 
+  // Login
   const settingUserInfo = (email,password) => {
 
     let userInfo = { mail: '',password: '' }
@@ -34,15 +36,11 @@ export const UserContext = ({ children }) => {
       setEmailHelp('Ingresa un email correcto')
       setPswError(true)
       setPswHelp('La contraseña debe incluir una Mayúscula, una minúscula, números y entre 6 a 20 dígitos.')
-    }
-
-    if (email.match(validRegex) === null) {
+    } else if (email.match(validRegex) === null) {
       userInfo = { mail: '',password: userInfo.password }
       setEmailError(true)
       setEmailHelp('Ingresa un email correcto')
-    }
-
-    if (password.match(passw) === null) {
+    } else if (password.match(passw) === null) {
       userInfo = { mail: userInfo.mail,password: '' }
       setPswError(true)
       setPswHelp('La contraseña debe incluir una Mayúscula, una minúscula, números y entre 6 a 20 dígitos.')
@@ -71,6 +69,55 @@ export const UserContext = ({ children }) => {
     setPswHelp('')
   }
 
+  //Register
+
+  const settingUserInfoRegister = (username,email,password,confirmPwd) => {
+
+    let userInfo = { username: '',mail: '',password: '' }
+
+    //Email validation
+    const validRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
+    //Password validation
+    const passw = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+
+    if (email.match(validRegex) !== null && password.match(passw) !== null && username !== '') {
+      userInfo = { username: username,mail: email,password: password }
+      setEmailError(false)
+      setEmailHelp('')
+      setPswError(false)
+      setPswHelp('')
+      setUserError(false)
+      setUserHelp('')
+    } else if (email.match(validRegex) === null && password.match(passw) === null && username === '') {
+      setEmailError(true)
+      setEmailHelp('Ingresa un email correcto')
+      setPswError(true)
+      setPswHelp('La contraseña debe incluir una Mayúscula, una minúscula, números y entre 6 a 20 dígitos.')
+      setUserError(true)
+      setUserHelp('Ingrese un usuario')
+    }
+
+    if (email.match(validRegex) === null) {
+      userInfo = { username: username,mail: '',password: password }
+      setEmailError(true)
+      setEmailHelp('Ingresa un email correcto')
+    }
+
+    if (password.match(passw) === null) {
+      userInfo = { username: username,mail: email,password: '' }
+      setPswError(true)
+      setPswHelp('La contraseña debe incluir una Mayúscula, una minúscula, números y entre 6 a 20 dígitos.')
+    }
+
+    if (password.match(passw) !== null) {
+      userInfo = { mail: userInfo.mail,password: '' }
+      userInfo = { username: '',mail: email,password: password }
+      setPswError(true)
+      setPswHelp('La contraseña debe incluir una Mayúscula, una minúscula, números y entre 6 a 20 dígitos.')
+    }
+    return userInfo;
+  }
 
   return (
     <UseUserContext.Provider
@@ -84,7 +131,9 @@ export const UserContext = ({ children }) => {
         pswError,
         emailHelp,
         pswHelp,
-        canLogin
+        settingUserInfoRegister,
+        userError,
+        userHelp,
       }}
     >
       {children}

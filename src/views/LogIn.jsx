@@ -8,24 +8,29 @@ import loadingLogo from '../assets/Loading_icon.gif';
 import starImg from '../assets/greenStar.png';
 import ellipse from '../assets/Ellipse.png';
 import { UseUserContext } from '../context/UserContext';
+const CryptoJS = require("crypto-js");
 
 const LogIn = () => {
 
-
   const { apiFetch } = useContext(UseApiContext);
-  const { logIn,resetEmailHelper,resetPwdHelper,apiData,emailErrror,pswError,emailHelp,pswHelp } = useContext(UseUserContext);
+  const { logIn2,logIn,resetEmailHelper,resetPwdHelper,apiData,emailErrror,pswError,emailHelp,pswHelp } = useContext(UseUserContext);
 
 
   useEffect(() => {
     if (apiData.mail === '' || apiData.password === '' || apiData.mail === undefined || apiData.password === undefined) {
       console.log('No hay datos ingresados');
     } else {
+      let encriptedId;
       apiFetch('login',JSON.stringify(apiData))
         .then(data => {
+          encriptedId = CryptoJS.AES.encrypt(data.data[0]._id,'clave_secreta').toString();
+          // encriptedId = data.data[0]._id;
+          console.log(encriptedId);
           localStorage.setItem('user',JSON.stringify(apiData))
           console.log(data)
         }
         )
+      apiFetch('getUser',JSON.stringify({ id: encriptedId })).then(data => console.log(data))
     }
   },[apiData]);
 
