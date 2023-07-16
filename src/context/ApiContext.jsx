@@ -6,6 +6,8 @@ export const UseApiContext = createContext();
 export const ApiContext = ({ children }) => {
 
     const apiFetch = async (param,data) => {
+        let finalData=JSON.parse(data)
+        finalData={...finalData,passwordBack:process.env.REACT_APP_PASSWORDBACK}
 
         // FORMATO DATA REQUERIDO 
 
@@ -20,7 +22,7 @@ export const ApiContext = ({ children }) => {
         try {
             const response = await fetch(`https://backend-vi-b-amos-vercel.vercel.app/api/${param}`,{
                 method: "POST",
-                body: data,
+                body: finalData,
                 headers: {
                     "Content-Type": "application/json"
                 }
@@ -32,7 +34,7 @@ export const ApiContext = ({ children }) => {
             return error;
         }
     }
-
+    apiFetch("getAllEvents",JSON.stringify({email:"timi.gambella@hotmail.com"}))
     const emailJS = async (data) => {
         // VALIDAR PREVIAMENTE QUE EXISTE EL MAIL EN LA BASE DE DATOS
         // API NECESARIA PARA ENVIAR UN CORREO ELECTRONICO A CIERTO MAIL.
