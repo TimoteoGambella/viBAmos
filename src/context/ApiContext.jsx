@@ -8,7 +8,7 @@ export const ApiContext = ({ children }) => {
     const apiFetch = async (param,data) => {
         let finalData=JSON.parse(data)
         finalData={...finalData,passwordBack:process.env.REACT_APP_PASSWORDBACK}
-
+        finalData=JSON.stringify(finalData)
         // FORMATO DATA REQUERIDO 
 
         // JSON.stringify({
