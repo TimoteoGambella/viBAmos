@@ -34,7 +34,7 @@ export const ApiContext = ({ children }) => {
             return error;
         }
     }
-    apiFetch("getAllEvents",JSON.stringify({email:"timi.gambella@hotmail.com"}))
+
     const emailJS = async (data) => {
         // VALIDAR PREVIAMENTE QUE EXISTE EL MAIL EN LA BASE DE DATOS
         // API NECESARIA PARA ENVIAR UN CORREO ELECTRONICO A CIERTO MAIL.
