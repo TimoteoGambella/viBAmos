@@ -43,8 +43,7 @@ export const ApiContext = ({ children }) => {
         //     contrasena:"",
         //     toMail:""
         // }
-
-        emailjs.send('service_rkbguuj','template_7y8c547',data,process.env.EMAILJSKEY).then(
+        emailjs.send('service_rkbguuj','template_7y8c547',data,process.env.REACT_APP_EMAILJSKEY).then(
             function (response) {
                 return true;
             },

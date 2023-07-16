@@ -42,14 +42,11 @@
 
     span {
       @include medidas(100%, auto);
-    }
-
-    a {
+      color: #002F6C;
       text-decoration: none;
       font-style: normal;
       font-weight: 500;
       letter-spacing: 0.056px;
-      color: #002F6C;
     }
   }
 

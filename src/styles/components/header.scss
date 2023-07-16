@@ -1,0 +1,87 @@
+@import '../generalStyles.scss';
+
+
+.header {
+  @include medidas(100%, 5rem);
+  background: grey;
+  display: flex;
+  align-items: center;
+  padding: 0 0 0 1rem;
+  border-radius: .1rem;
+
+  img {
+    @include medidas(30%, 4rem);
+    justify-self: center;
+  }
+}
+
+.menu {
+  content: '';
+  @include medidas(2rem, 5px);
+  position: relative;
+  background: #FBFBFB;
+  border: none;
+  border-radius: .1rem;
+  transition: all .3s ease;
+  margin-right: 5rem;
+
+  &::after {
+    content: '';
+    @include medidas(100%, 5px);
+    background: #FBFBFB;
+    display: block;
+    position: absolute;
+    bottom: .8rem;
+    border-radius: .1rem;
+    transition: all .3s ease;
+
+  }
+
+  &::before {
+    content: '';
+    @include medidas(100%, 5px);
+    background: #FBFBFB;
+    display: block;
+    position: absolute;
+    top: .8rem;
+    border-radius: .1rem;
+    transition: all .3s ease;
+
+  }
+}
+
+.menu-active {
+
+  @include medidas(2rem, 5px);
+  position: relative;
+  background: transparent;
+  border: none;
+  transition: all .3s ease;
+  margin-right: 5rem;
+
+  &::after {
+    content: '';
+    @include medidas(100%, 5px);
+    background: #FBFBFB;
+    display: block;
+    position: absolute;
+    bottom: 0rem;
+    border-radius: .1rem;
+    transform: rotate(-45deg);
+    transition: all .3s ease;
+  }
+
+  &::before {
+    content: '';
+    @include medidas(100%, 5px);
+    background: #FBFBFB;
+    display: block;
+    position: absolute;
+    top: 0rem;
+    border-radius: .1rem;
+    transform: rotate(45deg);
+    transition: all .3s ease;
+
+  }
+
+}
