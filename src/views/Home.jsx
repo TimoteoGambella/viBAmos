@@ -2,6 +2,7 @@ import { useContext,useEffect,useState } from "react";
 import { UseApiContext } from "../context/ApiContext";
 import { useNavigate } from 'react-router-dom';
 import Header from "../components/Header";
+import HeroSection from "../components/HeroSection";
 
 export default function Home() {
 
@@ -17,6 +18,7 @@ export default function Home() {
     return (
         <div >
             <Header />
+            <HeroSection />
         </div>
     )
 }
