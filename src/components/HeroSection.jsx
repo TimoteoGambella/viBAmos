@@ -6,9 +6,10 @@ import SearchBar from './SearchBar';
 const HeroSection = () => {
   return (
     <div className='heroSection'>
-      <img src={heroSEctionFoto} alt="" />
+      <img className='heroSectionBackground' src={heroSEctionFoto} alt="" />
       <div className='heroSection_titles'>
-        <h1>Encontrá tu próxima aventura </h1>
+        <h2>Encontrá tu</h2>
+        <h2>próxima aventura</h2>
         <h3 className='font-mobile-16'>Viví experiencias únicas en eventos por toda la ciudad</h3>
         <SearchBar />
       </div>

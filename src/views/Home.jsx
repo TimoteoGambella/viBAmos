@@ -3,6 +3,7 @@ import { UseApiContext } from "../context/ApiContext";
 import { useNavigate } from 'react-router-dom';
 import Header from "../components/Header";
 import HeroSection from "../components/HeroSection";
+import TrendSection from "../components/TrendSection";
 
 export default function Home() {
 
@@ -19,6 +20,7 @@ export default function Home() {
         <div >
             <Header />
             <HeroSection />
+            <TrendSection />
         </div>
     )
 }

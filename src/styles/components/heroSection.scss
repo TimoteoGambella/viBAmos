@@ -1,25 +1,24 @@
 @import '../generalStyles.scss';
 
 .heroSection {
-  @include medidas(100vw, 50vh);
+  @include medidas(100vw, 60vh);
   position: relative;
-  padding: 5rem 0 2rem 0;
+  padding: 5rem 0 1.5rem 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   color: #FBFBFB;
 
-  img {
+  .heroSectionBackground {
     position: absolute;
     top: 0;
     z-index: -1;
-    @include medidas(100vw, 50vh);
+    @include medidas(100vw, 60vh);
     object-fit: cover;
     filter: brightness(70%);
   }
 
-  h1 {
-    overflow-wrap: break-word;
+  h2 {
     font-size: 32px;
     font-style: normal;
     font-weight: 500;

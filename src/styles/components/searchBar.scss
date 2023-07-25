@@ -2,9 +2,27 @@
 
 
 .searchBar {
-  @include medidas(100%, 2.5rem);
+  @include medidas(100%, 3rem);
   display: flex;
   align-items: center;
+
+  div {
+    @include medidas(3rem, 100%);
+    background: #FBFBFB;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    border-left: none;
+    border-top-right-radius: .2rem;
+    border-bottom-right-radius: .2rem;
+  }
+
+  img {
+    @include medidas(1.3rem, auto);
+    right: 0;
+  }
 }
 
 .searchIcon {
@@ -16,7 +34,10 @@
 }
 
 .searchInput {
-  @include medidas(100%, 100%);
-  width: 100%;
+  @include medidas(90%, 100%);
+  border-top-left-radius: .2rem;
+  border-bottom-left-radius: .2rem;
   padding-left: 2.5rem;
+  outline: none;
+  border: 1px solid black;
 }
