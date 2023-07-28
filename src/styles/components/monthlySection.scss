@@ -1,0 +1,28 @@
+@import '../generalStyles.scss';
+
+.monthlySection {
+  @include medidas(100%, 50vh);
+  padding: 1.5rem 0rem 0 1rem;
+
+  &_title {
+    display: flex;
+    align-items: center;
+    margin-bottom: .5rem;
+  }
+
+  &_icon {
+    @include medidas(auto, auto);
+    margin-right: .5rem;
+  }
+
+  h2 {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 400;
+  }
+}
+
+.monthlyCardsSection {
+  @include medidas(100%, 35vh);
+  overflow-x: scroll;
+}

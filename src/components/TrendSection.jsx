@@ -12,7 +12,7 @@ const TrendSection = () => {
         <h2>Eventos en tendencia</h2>
       </div>
       <div className='trendCardsSection'>
-        <Carousel />
+        <Carousel type={'trendy'} />
       </div>
     </div>
   )

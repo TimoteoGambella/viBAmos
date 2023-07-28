@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import Header from "../components/Header";
 import HeroSection from "../components/HeroSection";
 import TrendSection from "../components/TrendSection";
+import MonthlySection from "../components/MonthlySection";
 
 export default function Home() {
 
@@ -21,6 +22,7 @@ export default function Home() {
             <Header />
             <HeroSection />
             <TrendSection />
+            <MonthlySection />
         </div>
     )
 }

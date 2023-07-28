@@ -1,7 +1,7 @@
 @import '../generalStyles.scss';
 
 .trendSection {
-  @include medidas(100%, 50vh);
+  @include medidas(100%, 40vh);
   padding: 1.5rem 0rem 0 1rem;
 
   &_title {
