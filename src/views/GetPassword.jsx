@@ -2,7 +2,7 @@ import React,{ useContext,useState } from 'react'
 import '../styles/getPassword.scss';
 import Input from '../components/inputs/Input';
 import Button from '../components/buttons/Button';
-import logo from '../assets/viBAmos.png';
+import logo from '../assets/viBAmos.svg';
 import polygonPurple from '../assets/polygonPurple.png';
 import ellipseAqua from '../assets/ellipse-aqua.png';
 import checkIcon from '../assets/check-circle.svg';

@@ -2,7 +2,7 @@ import React,{ useContext } from 'react'
 import '../styles/SignUp.scss';
 import Input from '../components/inputs/Input';
 import Button from '../components/buttons/Button';
-import logo from '../assets/viBAmos.png';
+import logo from '../assets/viBAmos.svg';
 import rectangle from '../assets/rectangle.png';
 import polygon from '../assets/Polygon.png';
 import { UseUserContext } from '../context/UserContext';

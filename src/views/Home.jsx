@@ -5,6 +5,9 @@ import Header from "../components/Header";
 import HeroSection from "../components/HeroSection";
 import TrendSection from "../components/TrendSection";
 import MonthlySection from "../components/MonthlySection";
+import YearSection from "../components/YearSection";
+import FeaturedPublishersSection from "../components/FeaturedPublishersSection";
+import Footer from "../components/Footer";
 
 export default function Home() {
 
@@ -18,11 +21,14 @@ export default function Home() {
     },[])
 
     return (
-        <div >
+        <div>
             <Header />
             <HeroSection />
             <TrendSection />
             <MonthlySection />
+            <YearSection />
+            <FeaturedPublishersSection />
+            <Footer />
         </div>
     )
 }

@@ -1,0 +1,25 @@
+@import '../generalStyles.scss';
+
+.seeAllEventsButton {
+  @include medidas(100%, 2rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  color: #002F6C;
+  margin-top: 1.5rem;
+  text-decoration: none;
+
+  i {
+    @include medidas(1.5rem, .8rem);
+    display: block;
+    background-image: url('../../assets/icons/long-arrow-alt-right.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}

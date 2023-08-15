@@ -1,10 +1,8 @@
 @import '../generalStyles.scss';
 
-.trendSection {
-  @include medidas(100%, 40vh);
+.featuredSection {
+  @include medidas(100%, 30vh);
   padding: 1.5rem 0rem 0 1rem;
-  position: relative;
-  overflow: hidden;
 
   &_title {
     display: flex;
@@ -24,15 +22,7 @@
   }
 }
 
-.trendCardsSection {
-  @include medidas(100%, 30vh);
+.featuredCardsSection {
+  @include medidas(100%, 70%);
   overflow-x: scroll;
-}
-
-.TrendEllipsePurple {
-  position: absolute;
-  @include medidas(25rem, auto);
-  top: -40%;
-  right: -40%;
-  z-index: -10;
 }

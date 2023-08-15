@@ -1,10 +1,9 @@
 @import '../generalStyles.scss';
 
-.trendSection {
-  @include medidas(100%, 40vh);
+.yearSection {
+  @include medidas(100%, 50vh);
   padding: 1.5rem 0rem 0 1rem;
   position: relative;
-  overflow: hidden;
 
   &_title {
     display: flex;
@@ -24,15 +23,15 @@
   }
 }
 
-.trendCardsSection {
-  @include medidas(100%, 30vh);
+.yearCardsSection {
+  @include medidas(100%, 35vh);
   overflow-x: scroll;
 }
 
-.TrendEllipsePurple {
+.YearStar {
+  @include medidas(28rem, auto);
   position: absolute;
-  @include medidas(25rem, auto);
-  top: -40%;
-  right: -40%;
+  top: -45%;
+  left: -50%;
   z-index: -10;
 }

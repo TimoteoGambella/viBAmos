@@ -1,17 +1,16 @@
 @import '../generalStyles.scss';
 
-.monthlyCard {
-  @include medidas(70vw, 100%);
+.featuredCard {
+  @include medidas(50vw, 100%);
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   border-radius: .1rem;
-  background-color: #FBFBFB;
 
   &__header {
     @include medidas(100%, 50%);
-    background-image: url('../../assets/eventosFotos/monthlyFoto.jpeg');
+    background-image: url('../../assets/eventosFotos/publisher.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -59,11 +58,11 @@
   }
 }
 
-.monthlyCard__info {
+.featuredCard__info {
   padding: .2rem 1rem;
 }
 
-.monthlyCard__infoHeader {
+.featuredCard__infoHeader {
   @include medidas(100%, 30%);
 
   display: flex;
@@ -73,7 +72,7 @@
     @include medidas(60%, 100%);
     display: flex;
     align-items: center;
-    color: #FC8A29;
+    color: #B07C17;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
@@ -90,7 +89,7 @@
   &--iconOne {
     @include medidas(1rem, 1rem);
     display: block;
-    background-image: url('../../assets/icons/glass-martini.svg');
+    background-image: url('../../assets/icons/paint-brush.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -109,9 +108,9 @@
   }
 }
 
-.monthlyCard__infoBody {
+.featuredCard__infoBody {
 
-  @include medidas(100%, 60%);
+  @include medidas(100%, 100%);
 
   h3 {
     @include medidas(100%, 30%);

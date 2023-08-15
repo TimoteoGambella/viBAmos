@@ -17,3 +17,21 @@
   overflow: scroll;
   padding-right: 6rem;
 }
+
+.carouselSectionYearly {
+  @include medidas(fit-content, 100%);
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  overflow: scroll;
+  padding-right: 6rem;
+}
+
+.carouselSectionPublishers {
+  @include medidas(fit-content, 100%);
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  overflow: scroll;
+  padding-right: 6rem;
+}
