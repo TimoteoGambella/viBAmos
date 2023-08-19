@@ -1,9 +1,9 @@
 import React from 'react'
-import Carousel from './Carousel'
-import '../styles/components/yearSection.scss'
-import calendarIcon from '../assets/icons/calendar.svg'
-import SeeAllEventsButton from './buttons/SeeAllEventsButton'
-import Star from '../assets/fondos/StarBold.svg'
+import Carousel from '../Carousel'
+import '../../styles/components/yearSection.scss'
+import calendarIcon from '../../assets/icons/calendar.svg'
+import SeeAllEventsButton from '../buttons/SeeAllEventsButton'
+import Star from '../../assets/fondos/StarBold.svg'
 
 const YearSection = () => {
   return (

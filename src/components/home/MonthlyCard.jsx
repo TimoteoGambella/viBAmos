@@ -1,5 +1,5 @@
 import React from 'react'
-import '../styles/components/monthlyCard.scss';
+import '../../styles/components/monthlyCard.scss';
 
 const MonthlyCard = () => {
   return (

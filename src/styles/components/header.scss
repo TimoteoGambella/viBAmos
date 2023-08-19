@@ -16,7 +16,7 @@
   }
 }
 
-.menu {
+.button {
   content: '';
   @include medidas(2rem, 5px);
   position: relative;
@@ -51,7 +51,7 @@
   }
 }
 
-.menu-active {
+.button-active {
 
   @include medidas(2rem, 5px);
   position: relative;

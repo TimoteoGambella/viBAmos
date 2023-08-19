@@ -1,7 +1,7 @@
 import React from 'react'
-import '../styles/components/featuredPublishersSection.scss'
-import star from '../assets/icons/star.svg'
-import Carousel from './Carousel'
+import '../../styles/components/featuredPublishersSection.scss'
+import star from '../../assets/icons/star.svg'
+import Carousel from '../Carousel'
 
 const FeaturedPublishersSection = () => {
   return (

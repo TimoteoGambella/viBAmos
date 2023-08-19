@@ -2,12 +2,13 @@ import { useContext,useEffect,useState } from "react";
 import { UseApiContext } from "../context/ApiContext";
 import { useNavigate } from 'react-router-dom';
 import Header from "../components/Header";
-import HeroSection from "../components/HeroSection";
-import TrendSection from "../components/TrendSection";
-import MonthlySection from "../components/MonthlySection";
-import YearSection from "../components/YearSection";
-import FeaturedPublishersSection from "../components/FeaturedPublishersSection";
+import HeroSection from "../components/home/HeroSection";
+import TrendSection from "../components/home/TrendSection";
+import MonthlySection from "../components/home/MonthlySection";
+import YearSection from "../components/home/YearSection";
+import FeaturedPublishersSection from "../components/home/FeaturedPublishersSection";
 import Footer from "../components/Footer";
+
 
 export default function Home() {
 

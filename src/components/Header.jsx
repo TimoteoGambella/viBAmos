@@ -1,21 +1,25 @@
 import React,{ useState } from 'react'
-import logo from '../assets/BABlanco.svg';
+import logo from '../assets/icons/BABlanco.svg';
 import '../styles/components/header.scss'
+import Menu from './Menu';
 
 const Header = () => {
 
-  const [menu,setMenu] = useState('menu');
+  const [button,setButton] = useState('button');
 
   const activeMenu = () => {
-    menu === 'menu' ? setMenu('menu-active') : setMenu('menu')
+    button === 'button' ? setButton('button-active') : setButton('button')
   }
 
   return (
-    <div className='header'>
-      <button className={menu} onClick={activeMenu}>
-      </button>
-      <img src={logo} alt="" />
-    </div>
+    <>
+      <Menu />
+      <div className='header'>
+        <button className={button} onClick={activeMenu}>
+        </button>
+        <img src={logo} alt="" />
+      </div>
+    </>
   )
 }
 

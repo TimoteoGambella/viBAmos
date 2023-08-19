@@ -1,0 +1,22 @@
+@import '../generalStyles.scss';
+
+.menu {
+  @include medidas(100vw, 100vh);
+  position: absolute;
+  background-color: #FBFBFB;
+  z-index: 10000;
+}
+
+.closeMenu {
+  @include medidas(2rem, 2rem);
+  background: none;
+  outline: none;
+  border: none;
+
+  i {
+    display: block;
+    @include medidas(100%, 100%);
+    background-image: url('../../assets/icons/xmark.svg');
+    background-repeat: no-repeat;
+  }
+}

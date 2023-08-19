@@ -1,8 +1,8 @@
 import React from 'react'
-import calendarIcon from '../assets/icons/calendar.svg'
-import '../styles/components/monthlySection.scss'
-import Carousel from './Carousel'
-import SeeAllEventsButton from './buttons/SeeAllEventsButton'
+import calendarIcon from '../../assets/icons/calendar.svg'
+import '../../styles/components/monthlySection.scss'
+import Carousel from '../Carousel'
+import SeeAllEventsButton from '../buttons/SeeAllEventsButton'
 
 
 const TrendSection = () => {

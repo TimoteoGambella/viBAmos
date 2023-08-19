@@ -1,7 +1,7 @@
 import React from 'react'
-import '../styles/components/heroSection.scss';
-import heroSEctionFoto from '../assets/eventosFotos/heroSectionFoto.jpeg';
-import SearchBar from './SearchBar';
+import '../../styles/components/heroSection.scss';
+import heroSEctionFoto from '../../assets/eventosFotos/heroSectionFoto.jpeg';
+import SearchBar from '../SearchBar';
 
 const HeroSection = () => {
   return (

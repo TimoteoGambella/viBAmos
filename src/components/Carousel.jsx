@@ -1,9 +1,9 @@
 import React from 'react'
 import '../styles/components/carousel.scss'
-import TrendCard from './TrendCard'
-import MonthlyCard from './MonthlyCard'
-import YearCard from './YearCard'
-import FeaturedPublishersCard from './FeaturedPublishersCard'
+import TrendCard from './home/TrendCard'
+import MonthlyCard from './home/MonthlyCard'
+import YearCard from './home/YearCard'
+import FeaturedPublishersCard from './home/FeaturedPublishersCard'
 
 const Carousel = ({ type }) => {
   return (
