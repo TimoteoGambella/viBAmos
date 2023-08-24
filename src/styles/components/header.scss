@@ -16,11 +16,11 @@
   }
 }
 
-.button {
+.buttonMenu {
   content: '';
   @include medidas(2rem, 5px);
   position: relative;
-  background: #FBFBFB;
+  // background: #FBFBFB;
   border: none;
   border-radius: .1rem;
   transition: all .3s ease;
