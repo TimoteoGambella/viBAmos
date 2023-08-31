@@ -1,4 +1,4 @@
-@import '../generalStyles.scss';
+@import '../../generalStyles.scss';
 
 .featuredCard {
   @include medidas(50vw, 100%);
@@ -10,7 +10,7 @@
 
   &__header {
     @include medidas(100%, 50%);
-    background-image: url('../../assets/eventosFotos/publisher.jpeg');
+    background-image: url('../../../assets/eventosFotos/publisher.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -35,7 +35,7 @@
     i {
       @include medidas(1.3rem, 1.3rem);
       display: block;
-      background-image: url('../../assets/icons/heart.png');
+      background-image: url('../../../assets/icons/heart.png');
       background-repeat: no-repeat;
       background-size: cover;
     }
@@ -89,7 +89,7 @@
   &--iconOne {
     @include medidas(1rem, 1rem);
     display: block;
-    background-image: url('../../assets/icons/paint-brush.svg');
+    background-image: url('../../../assets/icons/paint-brush.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -99,7 +99,7 @@
   &--iconTwo {
     @include medidas(1rem, 1rem);
     display: block;
-    background-image: url('../../assets/icons/clock.svg');
+    background-image: url('../../../assets/icons/clock.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -134,7 +134,7 @@
   &--iconOne {
     @include medidas(1rem, 1rem);
     display: block;
-    background-image: url('../../assets/icons/location-dot.svg');
+    background-image: url('../../../assets/icons/location-dot.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -145,7 +145,7 @@
   &--iconTwo {
     @include medidas(1rem, 1rem);
     display: block;
-    background-image: url('../../assets/icons/ticket.svg');
+    background-image: url('../../../assets/icons/ticket.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

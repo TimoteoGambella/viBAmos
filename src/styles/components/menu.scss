@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  position: absolute;
+  position: fixed;
   background-color: #FBFBFB;
   top: 0;
   right: 0;
@@ -19,7 +19,7 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  position: absolute;
+  position: fixed;
   background-color: #FBFBFB;
   right: 100%;
   z-index: 10000;
@@ -122,14 +122,29 @@
   }
 }
 
-// .figuresContainer {
-//   @include medidas(100%, 100%);
-//   position: fixed;
-//   overflow: hidden;
-// }
 
-// .yellowCircle {
-//   @include medidas(10rem, auto);
-//   position: absolute;
-//   right: -1rem;
-// }
+.yellowCircle {
+  @include medidas(10rem, auto);
+  position: absolute;
+  right: 0;
+  top: 15%;
+  object-fit: cover;
+  object-position: 5rem 0;
+}
+
+.bluePolygon {
+  @include medidas(9rem, auto);
+  position: absolute;
+  top: 60%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.startMenu {
+  @include medidas(10rem, auto);
+  position: absolute;
+  right: 0;
+  top: 80%;
+  object-fit: cover;
+  object-position: 1rem 0;
+}

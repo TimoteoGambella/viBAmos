@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../styles/components/yearCard.scss'
+import '../../styles/components/cards/yearCard.scss'
 
 const YearCard = () => {
   return (

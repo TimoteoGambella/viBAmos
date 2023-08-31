@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../styles/components/trendCard.scss'
+import '../../styles/components/cards/trendCard.scss'
 import cardBackground from '../../assets/eventosFotos/sliderFoto.jpeg'
 
 const TrendCard = () => {

@@ -1,0 +1,173 @@
+@import './generalStyles.scss';
+
+/*   HERO SECTION   */
+
+.heroSection {
+  @include medidas(100vw, 60vh);
+  position: relative;
+  padding: 5rem 0 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: #FBFBFB;
+
+  .heroSectionBackground {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    @include medidas(100vw, 60vh);
+    object-fit: cover;
+    filter: brightness(70%);
+  }
+
+  h2 {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 40px;
+  }
+
+  h3 {
+    margin-bottom: 4rem;
+    font-style: normal;
+  }
+
+  &_titles {
+    padding: 0 1rem;
+  }
+}
+
+/*   TREND SECTION  */
+
+.trendSection {
+  @include medidas(100%, 40vh);
+  padding: 1.5rem 0rem 0 1rem;
+  position: relative;
+  overflow: hidden;
+
+  &_title {
+    display: flex;
+    align-items: center;
+    margin-bottom: .5rem;
+  }
+
+  &_icon {
+    @include medidas(auto, auto);
+    margin-right: .5rem;
+  }
+
+  h2 {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 400;
+  }
+}
+
+.trendCardsSection {
+  @include medidas(100%, 30vh);
+  overflow-x: scroll;
+}
+
+.TrendEllipsePurple {
+  position: absolute;
+  @include medidas(25rem, auto);
+  top: -40%;
+  right: -40%;
+  z-index: -10;
+}
+
+/*   MONTHLY SECTION  */
+
+.monthlySection {
+  @include medidas(100%, 50vh);
+  padding: 1.5rem 0rem 0 1rem;
+
+  &_title {
+    display: flex;
+    align-items: center;
+    margin-bottom: .5rem;
+  }
+
+  &_icon {
+    @include medidas(auto, auto);
+    margin-right: .5rem;
+  }
+
+  h2 {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 400;
+  }
+}
+
+.monthlyCardsSection {
+  @include medidas(100%, 35vh);
+  overflow-x: scroll;
+}
+
+/*  YEAR SECTION  */
+
+.yearSection {
+  @include medidas(100%, 50vh);
+  padding: 1.5rem 0rem 0 1rem;
+  position: relative;
+
+  &_title {
+    display: flex;
+    align-items: center;
+    margin-bottom: .5rem;
+  }
+
+  &_icon {
+    @include medidas(auto, auto);
+    margin-right: .5rem;
+  }
+
+  h2 {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 400;
+  }
+}
+
+.yearCardsSection {
+  @include medidas(100%, 35vh);
+  overflow-x: scroll;
+}
+
+.YearStar {
+  @include medidas(100%, auto);
+  position: absolute;
+  top: -45%;
+  left: -40%;
+  z-index: -10;
+}
+
+/*  FEATURED SECTION  */
+
+.featuredSection {
+  @include medidas(100%, 30vh);
+  padding: 1.5rem 0rem 0 1rem;
+
+  &_title {
+    display: flex;
+    align-items: center;
+    margin-bottom: .5rem;
+  }
+
+  &_icon {
+    @include medidas(auto, auto);
+    margin-right: .5rem;
+  }
+
+  h2 {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 400;
+  }
+}
+
+.featuredCardsSection {
+  @include medidas(100%, 70%);
+  overflow-x: scroll;
+}

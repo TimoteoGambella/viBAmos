@@ -1,4 +1,4 @@
-@import '../generalStyles.scss';
+@import '../../generalStyles.scss';
 
 .trendCard {
   @include medidas(90vw, 100%);
@@ -37,7 +37,7 @@
 
     i {
       @include medidas(1rem, 1rem);
-      background-image: url('../../assets/icons/calendar-day.svg');
+      background-image: url('../../../assets/icons/calendar-day.svg');
       background-repeat: no-repeat;
       background-size: .8rem;
       background-position: center;
