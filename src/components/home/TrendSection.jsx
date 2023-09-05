@@ -1,6 +1,5 @@
 import React from 'react'
 import boltIcon from '../../assets/icons/bolt.svg'
-import '../../styles/components/cards/trendSection.scss'
 import Carousel from '../Carousel'
 import EllipsePurple from '../../assets/fondos/EllipsePurple.png'
 

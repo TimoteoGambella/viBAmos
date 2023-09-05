@@ -1,5 +1,4 @@
 import React,{ useState } from 'react'
-import '../styles/components/menu.scss'
 import logoAzul from '../assets/icons/BAAzul.svg'
 import profile from '../assets/fondos/profile.jpeg'
 import yellowCircle from '../assets/fondos/EllipseYellow.png'

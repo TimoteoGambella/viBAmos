@@ -1,5 +1,4 @@
 import React from 'react'
-import '../styles/components/carousel.scss'
 import TrendCard from './home/TrendCard'
 import MonthlyCard from './home/MonthlyCard'
 import YearCard from './home/YearCard'

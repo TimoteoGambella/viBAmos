@@ -1,5 +1,4 @@
 import React from 'react'
-import '../styles/components/footer.scss'
 import vibamos from '../assets/viBAmos.svg'
 import RectangleYellow from '../assets/fondos/RectangleYellow.png'
 

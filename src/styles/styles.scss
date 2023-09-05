@@ -3,10 +3,22 @@
 @import './LogIn.scss';
 @import './SignUp.scss';
 @import './getPassword.scss';
+@import './home.scss';
+@import './profile.scss';
 
 // COMPONENTS
 @import "./components/buttons.scss";
 @import "./components/inputs.scss";
 @import './components/header.scss';
+@import './components/carousel.scss';
+@import './components/footer.scss';
+@import './components/menu.scss';
+@import './components/searchBar.scss';
+@import './components/seeAllEventsButton.scss';
+@import './components/cards/featuredPublishersCard.scss';
+@import './components/cards/monthlyCard.scss';
+@import './components/cards/trendCard.scss';
+@import './components/cards/yearCard.scss';
+
 
 // VIEWS

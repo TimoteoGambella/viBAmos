@@ -1,5 +1,4 @@
 import React,{ useContext,useState } from 'react'
-import '../styles/getPassword.scss';
 import Input from '../components/inputs/Input';
 import Button from '../components/buttons/Button';
 import logo from '../assets/viBAmos.svg';

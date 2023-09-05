@@ -1,5 +1,3 @@
-@import './generalStyles.scss';
-
 .rectangle {
   @include medidas(50%, auto);
   position: absolute;

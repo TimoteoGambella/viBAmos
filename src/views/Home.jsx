@@ -1,7 +1,6 @@
 import { useContext,useEffect,useState } from "react";
 import { UseApiContext } from "../context/ApiContext";
 import { useNavigate } from 'react-router-dom';
-import '../styles/home.scss'
 import Header from "../components/Header";
 import heroSEctionFoto from '../assets/eventosFotos/heroSectionFoto.jpeg'
 import SearchBar from '../components/SearchBar';
@@ -28,7 +27,7 @@ export default function Home() {
 
     return (
         <div>
-            <Header />
+            <Header type='inicio' btnColor='inicio' />
             {/* <HeroSection /> */}
             <div className='heroSection'>
                 <img className='heroSectionBackground' src={heroSEctionFoto} alt="" />

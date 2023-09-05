@@ -1,5 +1,4 @@
 import React,{ useContext } from 'react'
-import '../styles/LogIn.scss';
 import Input from '../components/inputs/Input';
 import Button from '../components/buttons/Button';
 import logo from '../assets/viBAmos.svg';

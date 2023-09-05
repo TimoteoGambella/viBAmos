@@ -1,5 +1,4 @@
 import React from 'react'
-import '../../styles/components/cards/featuredPublishersCard.scss';
 
 const FeaturedPublishersCard = () => {
   return (

@@ -1,11 +1,13 @@
 import React,{ useState } from 'react'
-import logo from '../assets/icons/BABlanco.svg';
-import '../styles/components/header.scss'
+import logoWhite from '../assets/icons/BABlanco.svg';
+import logoBlue from '../assets/icons/BAAzul.svg';
 import Menu from './Menu';
 
-const Header = () => {
+const Header = ({ type,btnColor }) => {
 
-  const [button] = useState('buttonMenu');
+  const buttonInicio = 'buttonMenu'
+  const buttonGray = 'buttonMenu btnGray'
+
   const [controlMenu,setControlMenu] = useState(true);
 
   const activeMenu = () => {
@@ -16,9 +18,15 @@ const Header = () => {
     <>
       <Menu menuClass={activeMenu} controlMenu={controlMenu} />
       <div className='header'>
-        <button className={button} onClick={activeMenu}>
-        </button>
-        <img src={logo} alt="" />
+        {btnColor === 'inicio'
+          ?
+          <button className={buttonInicio} onClick={activeMenu}>
+          </button>
+          :
+          <button className={buttonGray} onClick={activeMenu}>
+          </button>
+        }
+        <img src={type === 'inicio' ? logoWhite : logoBlue} alt="" />
       </div>
     </>
   )
