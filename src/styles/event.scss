@@ -1,0 +1,10 @@
+.event {
+  @include medidas(100%, 100%);
+  padding: 5rem 0 0 0;
+  position: relative;
+}
+
+.eventCarousel {
+  @include medidas(100%, 15rem);
+  overflow: scroll;
+}

@@ -6,6 +6,7 @@ import LogIn from './views/LogIn';
 import SignUp from './views/SignUp';
 import GetPassword from './views/GetPassword';
 import Profile from './views/Profile';
+import Event from './views/Event';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="/signUp" element={<SignUp />} />
             <Route path="/getPassword" element={<GetPassword />} />
             <Route path='/profile' element={<Profile />} />
+            <Route path="/event" element={<Event />} />
           </Routes>
         </Router>
       </UserContext>
