@@ -18,7 +18,7 @@ const Carousel = ({ type }) => {
         (type === 'monthly')
           ?
           <div className='carouselSectionMonthly'>
-            <MonthlyCard />
+            <MonthlyCard monthlySize={'home'} />
             <MonthlyCard />
             <MonthlyCard />
           </div>

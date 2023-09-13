@@ -1,0 +1,59 @@
+.monthlyEvents {
+  @include medidas(100%, 100%);
+  padding: 5rem 0 0 0;
+  position: relative;
+
+  &_status {
+    @include medidas(100%, 2rem);
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+}
+
+.monthlyEventsContainer {
+  @include medidas(100%, 100%);
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.btnVerMasMonthlyEvents {
+  @include medidas(60%, 3rem);
+  color: #002F6C;
+  background: none;
+  border: none;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.EllipsePurpleHalf {
+  @include medidas(60%, auto);
+  position: absolute;
+  top: 10rem;
+  right: 0;
+  z-index: -1;
+}
+
+.RectangleOrange {
+  @include medidas(60%, 5rem);
+  position: absolute;
+  top: 50%;
+  left: -5rem;
+  transform: rotate(90deg);
+  z-index: -1;
+}
+
+.polygonYellow8Points {
+  @include medidas(70%, auto);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}

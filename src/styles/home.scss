@@ -31,7 +31,13 @@
   }
 
   &_titles {
-    padding: 0 1rem;
+    h2 {
+      padding: 0 1rem;
+    }
+
+    h3 {
+      padding: 0 1rem;
+    }
   }
 }
 

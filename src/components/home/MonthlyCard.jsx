@@ -1,8 +1,8 @@
 import React from 'react'
 
-const MonthlyCard = () => {
+const MonthlyCard = ({ monthlySize }) => {
   return (
-    <div className='monthlyCard'>
+    <div className={monthlySize === 'home' ? 'monthlyCard' : 'monthlyEventCardSize'}>
       <div className='monthlyCard__header'>
         <div>
           <i></i>

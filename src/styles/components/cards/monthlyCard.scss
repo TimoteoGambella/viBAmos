@@ -7,53 +7,68 @@
   border-radius: .1rem;
   background-color: #FBFBFB;
 
-  &__header {
+  &__info {
     @include medidas(100%, 50%);
-    background-image: url('../../../assets/eventosFotos/monthlyFoto.jpeg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    border-top-left-radius: .2rem;
-    border-top-right-radius: .2rem;
 
-
-    div {
-      @include medidas(2rem, 2rem);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: .2rem 0 0 .07rem;
-      position: absolute;
-      top: .5rem;
-      right: .5rem;
-      background: #FBFBFB;
-      border-radius: 50%;
-    }
-
-    i {
-      @include medidas(1.3rem, 1.3rem);
-      display: block;
-      background-image: url('../../../assets/icons/heart.png');
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-
-    span {
-      @include medidas(35%, 22%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      background: rgba(251, 251, 251, 0.70);
-    }
   }
+}
+
+.monthlyEventCardSize {
+  @include medidas(90vw, 100%);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: .1rem;
+  background-color: #FBFBFB;
 
   &__info {
     @include medidas(100%, 50%);
 
+  }
+}
+
+.monthlyCard__header {
+  @include medidas(100%, 7rem);
+  background-image: url('../../../assets/eventosFotos/monthlyFoto.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-top-left-radius: .2rem;
+  border-top-right-radius: .2rem;
+
+
+  div {
+    @include medidas(2rem, 2rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .2rem 0 0 .07rem;
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    background: #FBFBFB;
+    border-radius: 50%;
+  }
+
+  i {
+    @include medidas(1.3rem, 1.3rem);
+    display: block;
+    background-image: url('../../../assets/icons/heart.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  span {
+    @include medidas(35%, 22%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(251, 251, 251, 0.70);
   }
 }
 

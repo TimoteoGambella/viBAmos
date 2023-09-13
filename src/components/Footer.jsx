@@ -2,10 +2,12 @@ import React from 'react'
 import vibamos from '../assets/viBAmos.svg'
 import RectangleYellow from '../assets/fondos/RectangleYellow.png'
 
-const Footer = () => {
+const Footer = ({ noBackground }) => {
   return (
     <div className='footer'>
-      <img src={RectangleYellow} alt="" className='rectangleYellow' />
+      {noBackground !== 'true' &&
+        <img src={RectangleYellow} alt="" className='rectangleYellow' />
+      }
       <img src={vibamos} alt="" className='footerLogo' />
       <div className='footer_body'>
         <div>

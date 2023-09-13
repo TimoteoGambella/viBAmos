@@ -7,6 +7,7 @@ import SignUp from './views/SignUp';
 import GetPassword from './views/GetPassword';
 import Profile from './views/Profile';
 import Event from './views/Event';
+import MonthlyEvents from './views/MonthlyEvents';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/getPassword" element={<GetPassword />} />
             <Route path='/profile' element={<Profile />} />
             <Route path="/event" element={<Event />} />
+            <Route path="/monthlyEvent" element={<MonthlyEvents />} />
           </Routes>
         </Router>
       </UserContext>
